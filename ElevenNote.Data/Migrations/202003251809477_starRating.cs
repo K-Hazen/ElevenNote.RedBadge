@@ -3,7 +3,7 @@ namespace ElevenNote.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialMigration : DbMigration
+    public partial class starRating : DbMigration
     {
         public override void Up()
         {
@@ -15,6 +15,7 @@ namespace ElevenNote.Data.Migrations
                         OwnerId = c.Guid(nullable: false),
                         Title = c.String(nullable: false),
                         Content = c.String(nullable: false),
+                        IsStarred = c.Boolean(nullable: false),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ModifiedUtc = c.DateTimeOffset(precision: 7),
                     })
