@@ -22,5 +22,33 @@ namespace ElevenNote.WebMVC.Controllers
             var model = new NoteListItem[0];
             return View(model);
         }
+
+        //GET
+        //This section creates a GET method that gies users a VIEW in where they can input the info to create a note
+        //Making a request to get the create VIEW - "hey we need this page" 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(NoteCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
+
+
+
+
+
+
+
+
     }
 }
